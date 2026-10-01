@@ -1,0 +1,38 @@
+{
+  "settings": {
+    "name": "Jaber Hilali Travel Tourism & Cargo",
+    "phone": "+968 90908910, +968 96750065",
+    "email": "jabertraveltourism@gmail.com",
+    "vatin": "",
+    "cr": "1288091",
+    "address": "AL Ghashab, Al Rustaq, Post Code 318\nSultanate of Oman",
+    "logo": "company-logo.jpg",
+    "currency": "OMR",
+    "taxRate": 5,
+    "taxLabel": "VAT",
+    "prefix": "INV-",
+    "nextNumber": 1001,
+    "notes": "Thank you for choosing Jaber Hilali Travel Tourism & Cargo.",
+    "terms": "1. Ticket is non-refundable unless stated otherwise.\n2. Date change not permitted unless stated otherwise; where permitted, subject to airline penalty + service charge.\n3. Please verify passenger name spelling as per passport.",
+    "users": [],
+    "geminiApiKey": "",
+    "geminiModel": "gemini-2.0-flash-lite"
+  },
+  "invoices": [],
+  "companies": [],
+  "suppliers": [
+    {"id": "sup_flydubai", "name": "Flydubai", "type": "Airline", "contact": "Direct Portal", "phone": "", "email": "", "notes": "Direct Portal / B2B"},
+    {"id": "sup_emirates", "name": "Emirates Airline", "type": "Airline", "contact": "Direct Portal", "phone": "", "email": "", "notes": "Direct Portal / B2B"},
+    {"id": "sup_omanair", "name": "Oman Air", "type": "Airline", "contact": "Direct Portal", "phone": "", "email": "", "notes": "Direct Portal / B2B"},
+    {"id": "sup_salamair", "name": "SalamAir", "type": "Airline", "contact": "Direct Portal", "phone": "", "email": "", "notes": "Direct Portal / B2B"},
+    {"id": "sup_airarabia", "name": "Air Arabia", "type": "Airline", "contact": "Direct Portal", "phone": "", "email": "", "notes": "Direct Portal / B2B"},
+    {"id": "sup_akbar", "name": "Akbar Travels", "type": "Wholesaler", "contact": "B2B Desk", "phone": "", "email": "", "notes": "Wholesaler / Consolidator"},
+    {"id": "sup_travelport", "name": "Travelport / Galileo", "type": "GDS", "contact": "GDS Terminal", "phone": "", "email": "", "notes": "GDS Issuance"},
+    {"id": "sup_amadeus", "name": "Amadeus GDS", "type": "GDS", "contact": "GDS Terminal", "phone": "", "email": "", "notes": "GDS Issuance"},
+    {"id": "sup_alhind", "name": "Alhind Tours & Travels", "type": "Wholesaler", "contact": "B2B Portal", "phone": "", "email": "", "notes": "Wholesaler"},
+    {"id": "sup_tbo", "name": "TBO Holidays", "type": "Wholesaler", "contact": "B2B Portal", "phone": "", "email": "", "notes": "B2B Portal"}
+  ],
+  "expenses": [],
+  "customers": [],
+  "supplierPayments": []
+}

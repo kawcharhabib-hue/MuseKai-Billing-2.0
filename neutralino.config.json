@@ -1,0 +1,46 @@
+{
+  "applicationId": "com.musekai.billing",
+  "version": "2.0.0",
+  "defaultMode": "window",
+  "port": 47291,
+  "url": "/",
+  "documentRoot": "/resources/",
+  "enableServer": true,
+  "enableNativeAPI": true,
+  "tokenSecurity": "none",
+  "logging": {
+    "enabled": true,
+    "writeToLogFile": true
+  },
+  "nativeAllowList": [
+    "app.*",
+    "os.*",
+    "filesystem.*",
+    "storage.*",
+    "clipboard.*",
+    "window.*",
+    "events.*",
+    "debug.*"
+  ],
+  "modes": {
+    "window": {
+      "title": "MuseKAI Billing - Jaber Hilali Travel Tourism & Cargo",
+      "width": 1366,
+      "height": 850,
+      "minWidth": 1100,
+      "minHeight": 700,
+      "resizable": true,
+      "center": true,
+      "icon": "/resources/favicon.ico",
+      "exitProcessOnClose": true
+    }
+  },
+  "cli": {
+    "binaryName": "MuseKAI-Billing",
+    "resourcesPath": "/resources/",
+    "extensionsPath": "/extensions/",
+    "clientLibrary": "/resources/neutralino.js",
+    "binaryVersion": "6.9.0",
+    "clientVersion": "6.9.0"
+  }
+}

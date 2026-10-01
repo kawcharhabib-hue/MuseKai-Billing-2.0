@@ -1,0 +1,23 @@
+MuseKAI Travel Agency Billing & Accounting Suite - Version 2.0.0
+========================================================================
+
+Welcome to the MuseKAI Billing Setup Wizard.
+
+This software is designed specifically for Travel & Tourism agencies,
+handling full-cycle ticketing, invoicing, supplier settlements, and financial ledger management.
+
+CORE CAPABILITIES:
+- Authentic A4 & Thermal Invoicing with Travel Sector/PNR Details
+- Automated Ticketing Authority / Supplier Cost & Due Balance Tracking
+- Agency Service Charge Breakdown & Revenue Protection
+- Customer Receivables, Aging Analysis & WhatsApp Delivery
+- True Profit & Loss and Expense Management
+- Multi-User Roles (SuperAdmin, Admin, Counter Staff, Accountant)
+- Bank Account Statements & Payment Reconciliation
+- Ultra-Fast Offline Operation with AES-GCM Encrypted Vault
+
+INSTALLATION INSTRUCTIONS:
+- Click Next to choose the destination folder.
+- You can install for the current user or all users on this PC.
+- Check "Create a desktop shortcut" for quick one-click launching.
+========================================================================

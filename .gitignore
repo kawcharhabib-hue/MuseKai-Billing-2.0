@@ -1,0 +1,22 @@
+# Logs
+*.log
+neutralinojs.log
+
+# Temporary and build cache
+.tmp/
+dist/
+bin/
+node_modules/
+
+# Local database and secrets
+musekai-billing-data.json
+git_push.log
+
+# Local safety vault snapshots
+vault/*.dat
+
+# OS generated files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+.DS_Store
