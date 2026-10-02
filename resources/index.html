@@ -1434,8 +1434,8 @@ table.list tr:hover td {
                   <option value="percent">Percent %</option><option value="fixed">Fixed Amount</option>
                 </select></div>
                 <div><label>Discount Value</label><input type="number" id="f_discval" value="0" min="0" step="any" oninput="sync()"></div>
-                <div><label>VAT %</label><input type="number" id="f_taxrate" value="5" min="0" step="any" oninput="sync()"></div>
-                <div><label>VAT Label</label><input type="text" id="f_taxlabel" value="VAT" oninput="sync()"></div>
+                <div><label>Tax / VAT %</label><input type="number" id="f_taxrate" value="0" min="0" step="any" oninput="sync()"></div>
+                <div><label>Tax Label</label><input type="text" id="f_taxlabel" value="" placeholder="Optional" oninput="sync()"></div>
               </div>
             </div>
 
@@ -2198,8 +2198,8 @@ function seedSettings() {
     address: 'AL Ghashab, Al Rustaq, Post Code 318\nSultanate of Oman',
     logo: 'company-logo.jpg',
     currency: 'OMR',
-    taxRate: 5,
-    taxLabel: 'VAT',
+    taxRate: 0,
+    taxLabel: '',
     prefix: 'INV-',
     nextNumber: 1001,
     notes: 'Thank you for choosing Jaber Hilali Travel Tourism & Cargo.',
@@ -2218,6 +2218,16 @@ function loadDB() {
     if (raw) {
       const d = JSON.parse(raw);
       d.settings = Object.assign(seedSettings(), d.settings || {});
+      if (d.settings.taxRate === 5) {
+        d.settings.taxRate = 0;
+        d.settings.taxLabel = '';
+      }
+      (d.invoices || []).forEach(inv => {
+        if (inv.taxRate === 5 && (inv.currency === 'OMR' || !inv.currency)) {
+          inv.taxRate = 0;
+          inv.taxLabel = '';
+        }
+      });
       d.invoices = d.invoices || [];
       d.companies = d.companies || [];
       d.suppliers = (Array.isArray(d.suppliers) && d.suppliers.length) ? d.suppliers : seedDefaultSuppliers();
@@ -3399,8 +3409,8 @@ function blankInvoice() {
     items: [{ desc: '', qty: 1, rate: 0, costRate: 0 }],
     discountType: 'percent',
     discountValue: 0,
-    taxRate: s.taxRate,
-    taxLabel: s.taxLabel || 'VAT',
+    taxRate: s.taxRate || 0,
+    taxLabel: s.taxLabel || '',
     companyId: '',
     supplierId: '',
     customerId: '',
@@ -3801,7 +3811,7 @@ function invoiceHTML(inv, s) {
     (s.cr ? ' · CR: ' + esc(s.cr) : '') + (s.vatin ? '<br>VATIN: ' + esc(s.vatin) : '') + '</p></div>' +
     '</div>' +
     '<div class="inv-title">' +
-    '<div class="t">TAX INVOICE</div>' +
+    '<div class="t">INVOICE</div>' +
     '<div class="meta"><b>Invoice No:</b> ' + esc(inv.number) + '<br><b>Date:</b> ' + esc(inv.issueDate) + '<br><b>Due Date:</b> ' + esc(inv.dueDate) + '</div>' +
     '</div>' +
     '<div class="inv-parties">' +
